@@ -1,4 +1,4 @@
-可以下豆瓣相册跟活动照片,随便查看相册或者活动中的一个图片，如http://www.douban.com/photos/photo/1401257192/ ，如果想下以此图片开始的100张图片到~/Alan/pic，运行
+可以下豆瓣相册跟活动照片或者电影相册,随便查看相册或者活动中的一个图片，如http://www.douban.com/photos/photo/1401257192/ ，如果想下以此图片开始的100张图片到~/Alan/pic，运行
 python douban_gallary_downloader.py  http://www.douban.com/photos/photo/1401257192/  ~/Alan/pic 100
 
 usage:
