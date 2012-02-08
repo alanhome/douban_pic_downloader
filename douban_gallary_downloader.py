@@ -51,8 +51,6 @@ print "input url is "+ input_url
 print "output path is " + output_path
 
 while True:
-	global soup
-	global pic_list
 	try:
 		req = urllib2.Request(now_url, headers=headers)		
 		response = urllib2.urlopen(req)
@@ -62,7 +60,7 @@ while True:
 		pic_list = soup.findAll(attrs={"class":"mainphoto"})
 		print "html markup is "+str(pic_list)
 		next_url = soup.findAll(attrs={"class":"mainphoto"})[0]["href"]
-		if next_url.find("www.douban.com") == -1:
+		if next_url.find("douban.com") == -1:
 			next_url = "http://www.douban.com"+next_url
 		print "next url is "+next_url
 		pic_url =  soup.findAll(attrs={"class":"mainphoto"})[0].contents[1]["src"]
