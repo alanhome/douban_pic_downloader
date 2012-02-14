@@ -47,6 +47,15 @@ pic_cnt = 0
 soup=None
 pic_list=None
 
+try:
+	output_path = output_path.decode("utf-8")
+except Exception:
+	try:
+		output_path = output_path.decode("gbk")
+	except Exception:
+		print "can not decode path "
+		sys.exit(0)
+
 print "input url is "+ input_url
 print "output path is " + output_path
 
@@ -73,7 +82,7 @@ while True:
 		pic_cnt += 1
 		print "save pic to "+pic_name +"in dir "+output_path
 
-		time.sleep(10)
+		time.sleep(6)
 		
 		if next_url == input_url:
 			break
@@ -81,7 +90,6 @@ while True:
 			now_url = next_url
 	except Exception,err:
 		print err
-		print soup
 		print pic_list
 		break
 	
